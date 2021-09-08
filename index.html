@@ -1,0 +1,37 @@
+function fFibonacci () {
+
+
+
+					var vFibonacci
+					var vAnzahlFib;
+					var vAusgabe
+					var vStart=1;
+					var vPrevious = 0;
+					var vNext = 1;
+					
+					vAnzahlFib = document.getElementById("idAnzahlFib").value
+
+				
+					vAusgabe = "";
+					vAusgabe = vAusgabe + "<table border =1>"
+					vAusgabe = vAusgabe + "<tr><th> Fib(n) </th></tr>";
+					vAusgabe = vAusgabe + "<tr><td>"+ vNext +"  </td></tr>";
+
+					while (vStart <= vAnzahlFib) {
+
+					vFibonacci = vPrevious + vNext;
+					vPrevious = vNext;
+					vNext = vFibonacci;
+					vAusgabe = vAusgabe + "<tr><td>" + vFibonacci + "</td></tr>"
+
+						vStart++;
+
+					}
+
+					vAusgabe = vAusgabe + "</table>";
+
+
+					document.getElementById("idAusgabe").innerHTML = vAusgabe
+
+
+					}
